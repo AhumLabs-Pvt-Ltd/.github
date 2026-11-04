@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#CODE_OF_CONDUCT.md\"",
-    "test": "node --test scripts/",
+    "test": "node --test \"scripts/*.test.mjs\"",
     "audit": "pnpm audit --audit-level=high"
   },
   "devDependencies": {
