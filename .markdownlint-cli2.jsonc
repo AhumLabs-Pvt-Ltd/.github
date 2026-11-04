@@ -1,0 +1,9 @@
+{
+  "config": {
+    "default": true,
+    // Allow long lines; we wrap prose by hand.
+    "MD013": false,
+    // PR template starts with an H2 by design.
+    "MD041": false
+  }
+}

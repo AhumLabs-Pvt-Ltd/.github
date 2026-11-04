@@ -1,0 +1,54 @@
+name: Maritime knowledge correction
+description: Something in a knowledge card, glossary or schema is wrong or out of date.
+labels: ["knowledge", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for checking our facts. Please link an official source (IMO, flag state,
+        class society, or a published convention). Describe the correction in your own
+        words; do not paste long passages of convention text.
+  - type: input
+    id: file
+    attributes:
+      label: File or card
+      placeholder: knowledge/certificates/international-load-line-certificate.md
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What it says now
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source link
+      placeholder: https://www.imo.org/...
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your background (optional)
+      description: Helps reviewers weigh the correction.
+      options:
+        - Seafarer
+        - Ship manager or superintendent
+        - Class society or flag state
+        - Developer
+        - Other
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This issue contains no real ship, client or crew data.
+          required: true
